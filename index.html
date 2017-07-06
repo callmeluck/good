@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin:0;	padding: 0;}
+		html,body{width: 100%;height: 100%;}
+		.wrap{width: 100%;height: 100%;}
+		section{width: 100%;height: 100%;text-align:center;border: 2px dotted black;}
+		section h3{margin-top: 10%;}
+		a{text-decoration: none;font-size: 25px;color: white;}
+		.nav{position: fixed;top: 0;left: 0;width: 100%;background: blue;}
+		.nav ul{width:50%;margin: 0 auto;}
+		.nav ul li{list-style:none;display: inline-block;margin-left: 10px;}
+		a:hover{color: yellow;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<!-- nav -->
+		<div class="nav">
+			<ul>
+				<li><a href="#s1">郭树燃</a></li>
+				<li><a href="#s2">黄兴华</a></li>
+				<li><a href="#s3">陈杰</a></li>
+				<li><a href="#s4">李自明</a></li>
+				<li><a href="#s5">李特</a></li>
+				<li><a href="#s6">解新伟</a></li>
+				<li><a href="#s7">姚佳</a></li>
+				<li><a href="#s8">乔克</a></li>
+			</ul>
+		</div>
+		<!-- 老秃 -->
+		<section id="s1">
+			<h3>郭树燃</h3>
+			<figure>
+				<img src="images/guoshuran.png" alt="">
+			</figure>
+		</section>
+		<!-- 黄星华 -->
+		<section id="s2">
+			<h3>黄星华</h3>
+			<figure>
+				<img src="images/huangxinghua.png" alt="">
+			</figure>
+		</section>
+		<!-- 杰杰 -->
+		<section id="s3">
+			<h3>陈杰</h3>
+			<figure>
+				<img src="images/jiejie.png" alt="">
+			</figure>
+		</section>
+		<!-- 阿黑 -->
+		<section id="s4">
+			<h3>李自明</h3>
+			<figure>
+				<img src="images/liziming.png" alt="">
+			</figure>
+		</section>
+		<!-- 特哥 -->
+		<section id="s5">
+			<h3>李特</h3>
+			<figure>
+				<img src="images/lite.png" alt="">
+			</figure>
+		</section>
+		<!-- 小解 -->
+		<section id="s6">
+			<h3>解新伟</h3>
+			<figure>
+				<img src="images/xiaojie.png" alt="">
+			</figure>
+		</section>
+		<!-- 姚佳 -->
+		<section id="s7">
+			<h3>姚佳</h3>
+			<figure>
+				<img src="images/yaojia.png" alt="">
+			</figure>
+		</section>
+		<!-- 老五 -->
+		<section id="s8">
+			<h3>乔克</h3>
+			<figure>
+				<img src="" alt="">
+			</figure>
+		</section>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	var $root = $('html, body');
+	$('.nav a').click(function() {
+    $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+	});
+
+
+
+	$('.header a').click(function(){
+	   $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;	
+		
+	})
+</script>
+</html>
